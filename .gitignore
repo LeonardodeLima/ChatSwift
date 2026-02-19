@@ -1,0 +1,53 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## Xcode patch files
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid committed your dependencies 
+# .build/
+
+# Package.resolved
+# pkg-config files
+.build/
+
+# Carthage
+#
+# Add this line if you want to avoid committing your dependencies
+# Carthage/Build/
+
+# AccuRev SVN
+.accurev
+.svn
+
+# Fastlane
+#
+# It is recommended to not store the swiftsupport or screenshots in git
+# unless they are needed for your CI/CD process
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Code Injection
+#
+# After running with code injection, a few files are generated
+.injection/
+
+# macOS
+#
+.DS_Store
+DerivedData/
