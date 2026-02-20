@@ -20,7 +20,8 @@ jobs:
             -scheme chat \
             -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            ENABLE_TESTABILITY=YES
 
       - name: "Run Unit Tests"
         run: |
@@ -28,5 +29,6 @@ jobs:
             -project chat.xcodeproj \
             -scheme chat \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-            CODE_SIGNING_ALLOWED=NO
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.5' \
+            CODE_SIGNING_ALLOWED=NO \
+            ENABLE_TESTABILITY=YES
