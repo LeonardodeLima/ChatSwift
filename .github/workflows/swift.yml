@@ -2,20 +2,31 @@ name: "Pipeline: Swift Build & Test"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: "Compile Project"
-      run: swift build -v
-      
-    - name: "Run Unit Tests"
-      run: swift test -v
+      - uses: actions/checkout@v4
+
+      - name: "Compile Project"
+        run: |
+          xcodebuild build \
+            -project chat.xcodeproj \
+            -scheme chat \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: "Run Unit Tests"
+        run: |
+          xcodebuild test \
+            -project chat.xcodeproj \
+            -scheme chat \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGNING_ALLOWED=NO
