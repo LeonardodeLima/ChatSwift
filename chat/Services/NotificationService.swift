@@ -10,7 +10,7 @@ class NotificationService: UNNotificationServiceExtension {
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
 
         if let bestAttemptContent = bestAttemptContent {
-            // Aqui você pode modificar o conteúdo da notificação se necessário
+
             contentHandler(bestAttemptContent)
         }
     }

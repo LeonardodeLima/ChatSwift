@@ -131,6 +131,5 @@ private struct ErrorView: View {
 }
 
 #Preview {
-    HomeView()
-        .environmentObject(ServiceContainer())
+    HomeView().environmentObject(ServiceContainer())
 }

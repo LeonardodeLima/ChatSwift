@@ -1,10 +1,3 @@
-//
-//  chatTests.swift
-//  chatTests
-//
-//  Created by Leonardo Lima on 19/02/26.
-//
-
 import Testing
 import Foundation
 @testable import chat
